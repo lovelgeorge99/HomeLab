@@ -1,0 +1,35 @@
+version: '3'
+services:
+  frontend:
+    container_name: tracker-ui
+    image: lovelgeorge/mern-expense-tracker-frontend
+    ports:
+      - "1234:3000"
+    depends_on:
+      - backend
+    networks:
+      - mern-network
+  
+  backend:
+    container_name: tracker-api
+    image: lovelgeorge/mern-expense-tracker-backend
+    ports:
+      - "1224:5000"
+    depends_on:
+      - database
+    networks:
+      - mern-network
+
+  database:
+    image: mongo:4
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - /home/spacemonk/mern:/data/db
+    networks:
+      - mern-network
+
+networks:
+  mern-network:
+    driver: bridge

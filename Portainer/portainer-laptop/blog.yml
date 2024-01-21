@@ -1,0 +1,27 @@
+version: '3'
+
+
+services:
+
+  backend: 
+    image: lovelgeorge/blog_backend:latest
+    
+    ports:
+      - '2000:2000'
+
+    
+
+  
+  frontend:
+    image: lovelgeorge/blog_frontend:latest
+
+    ports:
+      - '3000:3000'
+
+    
+
+    depends_on:
+      - backend
+      
+networks:
+  webnet:
