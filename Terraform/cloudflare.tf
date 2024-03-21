@@ -28,14 +28,6 @@ variable "domain" {
 }
 
 # Create a record
-resource "cloudflare_record" "test" {
-  zone_id = var.zone_id
-  name    = "tests"
-  value   = "lovelgeorge.com"
-  type    = "CNAME"
-  proxied = true
-}
-
 resource "cloudflare_record" "terraform_managed_resource_5b4abb13cfd87a9f6881848c730b639d" {
   name    = "otthub"
   proxied = true
