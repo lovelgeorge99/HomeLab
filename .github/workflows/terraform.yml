@@ -3,10 +3,13 @@ name: 'Terraform'
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
     paths:
       - 'Terraform/*.tf'
   pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
