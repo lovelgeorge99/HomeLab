@@ -182,7 +182,7 @@ resource "cloudflare_record" "terraform_managed_resource_e714f38c6bf543b183aab2a
 
 
 resource "cloudflare_record" "terraform_managed_resource_d7d4f72d9c3b06560e43e1e0d6e6d6d8" {
-  name    = "tests"
+  name    = "testagain"
   proxied = true
   ttl     = 1
   type    = "CNAME"
