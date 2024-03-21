@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-    - Terraform
+    - 'Terraform/**'
     - '.github/workflows/**'
   pull_request:
 
