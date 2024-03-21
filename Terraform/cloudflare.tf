@@ -21,7 +21,6 @@ variable "zone_id" {}
 
 provider "cloudflare" {
   api_token = var.api_token
-  # api_token="3uM3v93Zf9LeJFeTGlG98uczF8WrbZ6XuZxrGHyF"
 }
 
 variable "domain" {
@@ -181,14 +180,6 @@ resource "cloudflare_record" "terraform_managed_resource_e714f38c6bf543b183aab2a
   zone_id = var.zone_id
 }
 
-resource "cloudflare_record" "terraform_managed_resource_0833298299fee86a6a0794f37b53a6e8" {
-  name    = "tdrive"
-  proxied = true
-  ttl     = 1
-  type    = "CNAME"
-  value   = "lovelgeorge.com"
-  zone_id = var.zone_id
-}
 
 resource "cloudflare_record" "terraform_managed_resource_d7d4f72d9c3b06560e43e1e0d6e6d6d8" {
   name    = "test"
