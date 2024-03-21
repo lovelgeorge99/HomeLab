@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
     paths:
     - Terraform
-    
+    - '.github/workflows/**'
   pull_request:
 
 permissions:
